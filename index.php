@@ -48,6 +48,7 @@
                 type: 'POST',
                 success:function(response){
                     console.log(response);
+                    load_img();
                 }
             });
         }
