@@ -91,6 +91,7 @@
                 },success:function(response){
                     console.log(response);
                     swal('DELETED!');
+                    setTimeout(load_img,2000);
                 }
             });
         }
