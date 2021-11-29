@@ -10,11 +10,21 @@ if($method == 'image'){
                 echo '<div class="card">';
                     echo '<img src="image_folder/'.$x.'" class="responsive-img "/>';
                         echo '<div class="card-content">';
-                            echo '<a href="#">This is a link</a>';
+                            echo '<button class="btn-small red" onclick="deleteFile(&quot;'.$x.'&quot;)">Delete</button>';
                         echo '</div>';
                 echo '</div>';
             echo '</div>';
         echo '</div>';
+    }
+}
+
+if($method == 'delete_file'){
+    $dir = "../image_folder/";
+    $file = $_POST['file'];
+    if(unlink($dir."".$file) == TRUE){
+        echo "deleted";
+    }else{
+        echo "failed";
     }
 }
 

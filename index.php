@@ -78,6 +78,22 @@
                 }
             });
         }
+
+        function deleteFile(file){
+            // console.log(file);
+            $.ajax({
+                url : 'process/controller.php',
+                type: 'POST',
+                cache: false,
+                data:{
+                    method: 'delete_file',
+                    file: file
+                },success:function(response){
+                    console.log(response);
+                    swal('DELETED!');
+                }
+            });
+        }
     </script>
 </body>
 </html>
