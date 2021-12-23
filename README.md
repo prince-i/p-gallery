@@ -1,5 +1,6 @@
 # p-gallery
 Developer: Prince Arce
+
 Simple image uploading application using AJAX, jQUery and PHP.
 
 Features:
